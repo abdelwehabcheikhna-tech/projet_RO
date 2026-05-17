@@ -1,0 +1,138 @@
+"""
+GENERATEUR DE RAPPORT TEXTE - RO 2026
+
+"""
+
+
+================================================================================
+                        RAPPORT DE RECHERCHE OPÉRATIONNELLE
+                        Université Libanaise Internationale en Mauritanie
+                        Faculté des Sciences - Année 2025-2026
+================================================================================
+
+TABLE DES MATIÈRES
+================================================================================
+1. Résumé exécutif
+2. Projet 1 : Optimisation des files d'attente hospitalières
+3. Projet 2 : Routage des camions d'eau à Nouakchott
+4. Projet 3 : Système d'optimisation des médicaments
+5. Conclusion
+
+================================================================================
+1. RÉSUMÉ EXÉCUTIF
+================================================================================
+
+Ce rapport présente l'application des méthodes de Recherche Opérationnelle à trois
+problèmes concrets en Mauritanie :
+
+1. Optimisation des files d'attente au centre hospitalier national
+2. Routage des camions d'eau pour la distribution à Nouakchott
+3. Système d'optimisation de recherche de médicaments
+
+================================================================================
+2. PROJET 1 : OPTIMISATION DES FILES D'ATTENTE HOSPITALIÈRES
+================================================================================
+
+Paramètres :
+- Taux d'arrivée (λ) = 5 patients/heure
+- Taux de service (μ) = 4 patients/heure/médecin
+
+Résultats par nombre de médecins :
+
++-----------+--------------+-------------------+-------------------+
+| Médecins  | Occupation   | Temps d'attente   | Patients en file  |
++-----------+--------------+-------------------+-------------------+
+| 1         | 125%         | Système instable  | ∞                 |
+| 2         | 62.5%        | 10 minutes        | 0.8               |
+| 3         | 41.7%        | 1 minute          | 0.1               |
+| 4         | 31.3%        | <1 minute         | 0.02              |
++-----------+--------------+-------------------+-------------------+
+
+✅ SOLUTION OPTIMALE : 2 médecins
+   - Temps d'attente : 10 minutes
+   - Taux d'occupation : 62.5%
+
+================================================================================
+3. PROJET 2 : ROUTAGE DES CAMIONS D'EAU À NOUAKCHOTT
+================================================================================
+
+Points de distribution :
+
+1. Dépôt (Tevragh-Zeina) - 0L
+2. Ksar - 250L
+3. Sebkha - 300L
+4. Toujounine - 200L
+5. Dar Naim - 280L
+6. Teyarett - 350L
+7. Arafat - 220L
+
+Contraintes :
+- Capacité camion : 1000L
+- Demande totale : 1600L → nécessite 2 camions
+
+Tournées optimisées :
+
+🚛 CAMION 1 (1000L) - Distance : 21.8 km
+   Dépôt → Toujounine (200L) → Arafat (220L) → Dar Naim (280L) → Sebkha (300L) → Dépôt
+
+🚛 CAMION 2 (600L) - Distance : 11.7 km
+   Dépôt → Ksar (250L) → Teyarett (350L) → Dépôt
+
+📊 STATISTIQUES GLOBALES :
+   - Distance totale : 33.5 km
+   - Taux de remplissage moyen : 80%
+
+================================================================================
+4. PROJET 3 : SYSTÈME D'OPTIMISATION DES MÉDICAMENTS
+================================================================================
+
+Réseau pharmaceutique de Nouakchott :
+
++-------------------+----------------------------------+-------------------+
+| Pharmacie         | Médicaments disponibles          | Prix (MRU)        |
++-------------------+----------------------------------+-------------------+
+| Pharmacie Tevragh | Paracétamol (50), Aspirine (100) | 200, 150          |
+| Pharmacie Ksar    | Amoxicilline (50), Insuline (20) | 480, 5000         |
+| Pharmacie Sebkha  | Paracétamol (30), Aspirine (50)  | 180, 160          |
+| Pharmacie Touj... | Insuline (10), Metformine (40)   | 4800, 300         |
+| Pharmacie Dar Naim| Aspirine (80), Metformine (30)   | 140, 320          |
+| Pharmacie Arafat  | Insuline (5), Paracétamol (40)   | 5200, 190         |
++-------------------+----------------------------------+-------------------+
+
+Exemple : Recherche d'Insuline (10 unités)
+
++---------------------+-------------------+----------------+-------------------+
+| Critère             | Pharmacie         | Prix total     | Distance          |
++---------------------+-------------------+----------------+-------------------+
+| 💰 Prix minimum     | Pharmacie Touj... | 48 000 MRU     | 5.4 km            |
+| 📍 Distance minimum | Pharmacie Ksar    | 50 000 MRU     | 1.4 km            |
++---------------------+-------------------+----------------+-------------------+
+
+💡 Analyse :
+   - Économie par critère prix : 2 000 MRU
+   - Gain de temps par critère distance : 60 minutes
+
+================================================================================
+5. CONCLUSION
+================================================================================
+
+Synthèse des résultats :
+
++----------------------+------------------------+-------------------+
+| Projet               | Métrique optimisée     | Résultat          |
++----------------------+------------------------+-------------------+
+| Files d'attente      | Temps d'attente        | 10 minutes        |
+| Routage eau          | Distance totale        | 33.5 km           |
+| Médicaments          | Prix optimal           | 48 000 MRU        |
++----------------------+------------------------+-------------------+
+
+Perspectives d'amélioration :
+- Développement d'une application mobile
+- Extension à d'autres villes (Nouadhibou, Kiiffa)
+- Intégration de données temps réel
+
+================================================================================
+                               FIN DU RAPPORT
+================================================================================
+"""
+ 
